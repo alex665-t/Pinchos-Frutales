@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- galeria.html - Página con galería de imágenes y videos -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>Galería | Pinchos de Frutas</title> <!-- Título de la pestaña -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos -->
+  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png"> <!-- Ícono de la pestaña -->
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="inicio.html">Inicio</a> <!-- Enlace a inicio -->
+    <a href="mision_vision.html">Misión y Visión</a> <!-- Enlace a misión/visión -->
+    <a href="pedidos.html">Pedidos</a> <!-- Enlace a pedidos -->
+    <a href="galeria.html">Galería</a> <!-- Enlace actual -->
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Galería Multimedia</h1> <!-- Título principal -->
+    
+    <!-- Sección de videos -->
+    <section>
+      <h2>Videos de Nuestros Productos</h2> <!-- Subtítulo -->
+      <div class="video-container">
+        <!-- Video 1 -->
+        <iframe src="video1.mp4" frameborder="0" allowfullscreen></iframe>
+        <!-- Video 2 -->
+        <iframe src="video2.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Sección de imágenes -->
+    <section>
+      <h2>Imágenes de Nuestros Pinchos</h2> <!-- Subtítulo -->
+      <div class="gallery">
+        <!-- Imagen principal -->
+        <img id="galeriaImagen" class="main-img" src="i5.jpg" alt="Pinchos de Frutas">
+        <!-- Miniaturas -->
+        <div class="thumbnails">
+          <img class="thumbnail" src="i5.jpg" alt="Pincho 1" onclick="cambiarImagenGaleria(this)">
+          <img class="thumbnail" src="i3.jpg" alt="Pincho 2" onclick="cambiarImagenGaleria(this)">
+          <img class="thumbnail" src="i4.jpg" alt="Pincho 3" onclick="cambiarImagenGaleria(this)">
+          <img class="thumbnail" src="i2.jpg" alt="Pincho 4" onclick="cambiarImagenGaleria(this)">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para la galería -->
+  <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- pedidos.html - Página para realizar pedidos en línea -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>Pedidos | Pinchos de Frutas</title> <!-- Título de la pestaña -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos -->
+  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png"> <!-- Ícono de la pestaña -->
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="inicio.html">Inicio</a> <!-- Enlace a inicio -->
+    <a href="mision_vision.html">Misión y Visión</a> <!-- Enlace a misión/visión -->
+    <a href="pedidos.html">Pedidos</a> <!-- Enlace actual -->
+    <a href="galeria.html">Galería</a> <!-- Enlace a galería -->
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Realiza tu Pedido</h1> <!-- Título principal -->
+    
+    <!-- Formulario de pedido -->
+    <form class="form-pedido" id="formularioPedido">
+      <!-- Campo para nombre -->
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" required>
+      
+      <!-- Campo para teléfono -->
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+      
+      <!-- Campo para dirección -->
+      <label for="direccion">Dirección de entrega:</label>
+      <textarea id="direccion" rows="3" required></textarea>
+      
+      <!-- Selección de producto -->
+      <label for="producto">Selecciona tu pincho:</label>
+      <select id="producto" required>
+        <option value="">-- Elige una opción --</option>
+        <option value="dulce">Pincho Dulce ($0.80)</option>
+        <option value="picante">Pincho Picante ($0.80)</option>
+        <option value="tropical">Pincho Tropical ($1.00)</option>
+        <option value="energetico">Pincho Energético ($1.20)</option>
+      </select>
+      
+      <!-- Campo para cantidad -->
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" min="1" value="1" required>
+      
+      <!-- Campo para notas adicionales -->
+      <label for="notas">Notas adicionales (opcional):</label>
+      <textarea id="notas" rows="3"></textarea>
+      
+      <!-- Botón de envío -->
+      <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <!-- Tabla de precios -->
+    <section>
+      <h2>Nuestros Precios</h2> <!-- Subtítulo -->
+      <table class="tabla-precios">
+        <thead>
+          <tr>
+            <th>Producto</th> <!-- Encabezado de columna -->
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Fila de producto 1 -->
+          <tr>
+            <td>Pincho Dulce</td>
+            <td>Manzana, guineo, malvaviscos y gomitas</td>
+            <td>$0.80</td>
+          </tr>
+          <!-- Fila de producto 2 -->
+          <tr>
+            <td>Pincho Picante</td>
+            <td>Piña, sandía, chamoy y tajín</td>
+            <td>$0.80</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Script para el formulario -->
+  <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

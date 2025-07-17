@@ -1,0 +1,210 @@
+/* estilos.css - Contiene todos los estilos para el sitio web */
+
+/* Estilos generales del cuerpo del documento */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Define la fuente principal */
+  background: linear-gradient(to bottom right, #fef5e7, #ffeaa7); /* Fondo gradiente */
+  color: #2d3436; /* Color del texto principal */
+  margin: 0; /* Elimina márgenes por defecto */
+  animation: fadeIn 1.2s ease-in; /* Animación de entrada */
+}
+
+/* Barra de navegación */
+nav {
+  background: wheat; /* Color de fondo */
+  text-align: center; /* Centra los enlaces */
+  padding: 15px; /* Espaciado interno */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra sutil */
+  position: sticky; /* Barra fija al hacer scroll */
+  top: 0; /* Posición en la parte superior */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+  margin: 0 15px; /* Espacio entre enlaces */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina subrayado */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s; /* Transición suave para hover */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+nav a:hover {
+  color: #2d3436; /* Cambia color al hacer hover */
+}
+
+/* Contenido principal */
+main {
+  padding: 40px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+  animation: fadeInUp 1.2s ease; /* Animación de entrada */
+}
+
+/* Encabezados principales */
+h1 {
+  color: #e67e22; /* Color naranja */
+  text-align: center; /* Centrado */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Encabezados secundarios */
+h2 {
+  color: #e67e22; /* Color naranja */
+  margin-top: 30px; /* Espacio superior */
+}
+
+/* Secciones de contenido */
+section {
+  margin-bottom: 30px; /* Espacio entre secciones */
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Galería de imágenes */
+.gallery {
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Organización vertical */
+  align-items: center; /* Centrado horizontal */
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Imagen principal de la galería */
+.main-img {
+  max-width: 100%; /* Ajuste al ancho del contenedor */
+  max-height: 400px; /* Altura máxima */
+  object-fit: cover; /* Ajuste de imagen manteniendo proporciones */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espacio inferior */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* Contenedor de miniaturas */
+.thumbnails {
+  display: flex; /* Diseño flexible en fila */
+  gap: 10px; /* Espacio entre miniaturas */
+  flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  justify-content: center; /* Centrado horizontal */
+}
+
+/* Estilo de cada miniatura */
+.thumbnail {
+  width: 80px; /* Ancho fijo */
+  height: 80px; /* Altura fija */
+  object-fit: cover; /* Ajuste de imagen manteniendo proporciones */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia cursor al pasar */
+  border: 2px solid #ccc; /* Borde gris */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover y activo para miniaturas */
+.thumbnail:hover,
+.thumbnail.active {
+  transform: scale(1.1); /* Escala ligeramente */
+  border-color: #e67e22; /* Borde naranja */
+}
+
+/* Contenedor de videos */
+.video-container {
+  display: flex; /* Diseño flexible */
+  flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  gap: 20px; /* Espacio entre videos */
+  justify-content: center; /* Centrado horizontal */
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Estilo de cada video */
+.video-container iframe {
+  width: 100%; /* Ancho completo */
+  max-width: 560px; /* Ancho máximo */
+  height: 315px; /* Altura fija */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* Formulario de pedidos */
+.form-pedido {
+  background: white; /* Fondo blanco */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+}
+
+/* Etiquetas del formulario */
+.form-pedido label {
+  display: block; /* Ocupa toda la línea */
+  margin-bottom: 10px; /* Espacio inferior */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Campos del formulario */
+.form-pedido input,
+.form-pedido select,
+.form-pedido textarea {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espacio inferior */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Botón del formulario */
+.form-pedido button {
+  background: #e67e22; /* Fondo naranja */
+  color: white; /* Texto blanco */
+  padding: 12px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia cursor al pasar */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para botón */
+.form-pedido button:hover {
+  background: #d35400; /* Color más oscuro al pasar mouse */
+}
+
+/* Tabla de precios */
+.tabla-precios {
+  width: 100%; /* Ancho completo */
+  border-collapse: collapse; /* Elimina espacio entre celdas */
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Celdas de la tabla */
+.tabla-precios th,
+.tabla-precios td {
+  border: 1px solid #ddd; /* Borde gris claro */
+  padding: 12px; /* Espaciado interno */
+  text-align: left; /* Alineación izquierda */
+}
+
+/* Encabezados de tabla */
+.tabla-precios th {
+  background-color: #e67e22; /* Fondo naranja */
+  color: white; /* Texto blanco */
+}
+
+/* Filas alternas de la tabla */
+.tabla-precios tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fondo gris muy claro */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; } /* Comienza transparente */
+  to { opacity: 1; } /* Termina opaco */
+}
+
+/* Animación de entrada desde abajo */
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; } /* Comienza abajo */
+  to { transform: translateY(0); opacity: 1; } /* Termina en posición */
+}
