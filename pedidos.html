@@ -1,93 +1,149 @@
 <!DOCTYPE html>
-<!-- pedidos.html - Página para realizar pedidos en línea -->
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-  <title>Pedidos | Pinchos de Frutas</title> <!-- Título de la pestaña -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
-  <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos -->
-  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png"> <!-- Ícono de la pestaña -->
+  <meta charset="UTF-8">
+  <title>Pedidos | Pinchos de Frutas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png">
 </head>
 <body>
-
-  <!-- Barra de navegación -->
-  <nav>
-    <a href="index.html">Inicio</a> <!-- Enlace a inicio -->
-    <a href="mision_vision.html">Misión y Visión</a> <!-- Enlace a misión/visión -->
-    <a href="pedidos.html">Pedidos</a> <!-- Enlace actual -->
-    <a href="galeria.html">Galería</a> <!-- Enlace a galería -->
+  <!-- Menú lateral -->
+  <nav class="sidebar">
+    <div class="logo">
+      <img src="logopincho-removebg-preview.png" alt="Logo Pinchos de Frutas">
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="mision_vision.html">
+          <i class="fas fa-bullseye"></i>
+          <span>Misión y Visión</span>
+        </a>
+      </li>
+      <li>
+        <a href="marketing.html">
+          <i class="fas fa-chart-line"></i>
+          <span>Marketing</span>
+        </a>
+      </li>
+      <li>
+        <a href="pedidos.html" class="active">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Pedidos</span>
+        </a>
+      </li>
+      <li>
+        <a href="galeria.html">
+          <i class="fas fa-images"></i>
+          <span>Galería</span>
+        </a>
+      </li>
+    </ul>
+    <div class="user-profile">
+      <img src="https://ui-avatars.com/api/?name=César+Portillo&background=ff9800&color=fff" alt="Usuario">
+      <span>@howtodewr</span>
+      <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
   </nav>
 
   <!-- Contenido principal -->
-  <main>
-    <h1>Realiza tu Pedido</h1> <!-- Título principal -->
-    
-    <!-- Formulario de pedido -->
-    <form class="form-pedido" id="formularioPedido">
-      <!-- Campo para nombre -->
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" id="nombre" required>
+  <main class="main-content">
+    <section class="order-section">
+      <h1>Realiza tu Pedido</h1>
       
-      <!-- Campo para teléfono -->
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" required>
-      
-      <!-- Campo para dirección -->
-      <label for="direccion">Dirección de entrega:</label>
-      <textarea id="direccion" rows="3" required></textarea>
-      
-      <!-- Selección de producto -->
-      <label for="producto">Selecciona tu pincho:</label>
-      <select id="producto" required>
-        <option value="">-- Elige una opción --</option>
-        <option value="dulce">Pincho Dulce ($0.80)</option>
-        <option value="picante">Pincho Picante ($0.80)</option>
-        <option value="tropical">Pincho Tropical ($1.00)</option>
-        <option value="energetico">Pincho Energético ($1.20)</option>
-      </select>
-      
-      <!-- Campo para cantidad -->
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="cantidad" min="1" value="1" required>
-      
-      <!-- Campo para notas adicionales -->
-      <label for="notas">Notas adicionales (opcional):</label>
-      <textarea id="notas" rows="3"></textarea>
-      
-      <!-- Botón de envío -->
-      <button type="submit">Enviar Pedido</button>
-    </form>
-
-    <!-- Tabla de precios -->
-    <section>
-      <h2>Nuestros Precios</h2> <!-- Subtítulo -->
-      <table class="tabla-precios">
-        <thead>
-          <tr>
-            <th>Producto</th> <!-- Encabezado de columna -->
-            <th>Descripción</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Fila de producto 1 -->
-          <tr>
-            <td>Pincho Dulce</td>
-            <td>Manzana, guineo, malvaviscos y gomitas</td>
-            <td>$0.80</td>
-          </tr>
-          <!-- Fila de producto 2 -->
-          <tr>
-            <td>Pincho Picante</td>
-            <td>Piña, sandía, chamoy y tajín</td>
-            <td>$0.80</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="order-container">
+        <!-- Formulario de pedido -->
+        <form class="form-pedido" id="formularioPedido">
+          <div class="form-group">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre completo:</label>
+            <input type="text" id="nombre" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
+            <input type="tel" id="telefono" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección de entrega:</label>
+            <textarea id="direccion" rows="3" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="producto"><i class="fas fa-utensils"></i> Selecciona tu pincho:</label>
+            <select id="producto" required>
+              <option value="">-- Elige una opción --</option>
+              <option value="dulce">Pincho Dulce ($0.80) - Manzana, guineo, malvaviscos y gomitas</option>
+              <option value="picante">Pincho Picante ($0.80) - Piña, sandía, chamoy y tajín</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="cantidad"><i class="fas fa-calculator"></i> Cantidad:</label>
+            <input type="number" id="cantidad" min="1" value="1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="notas"><i class="fas fa-sticky-note"></i> Notas adicionales (opcional):</label>
+            <textarea id="notas" rows="3"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Enviar Pedido
+          </button>
+        </form>
+        
+        <!-- Tabla de precios -->
+        <div class="price-table">
+          <h2><i class="fas fa-tags"></i> Nuestros Precios</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pincho Dulce</td>
+                <td>Manzana, guineo, malvaviscos y gomitas</td>
+                <td>$0.80</td>
+              </tr>
+              <tr>
+                <td>Pincho Picante</td>
+                <td>Piña, sandía, chamoy y tajín</td>
+                <td>$0.80</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="delivery-info">
+            <h3><i class="fas fa-info-circle"></i> Información importante</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Todos nuestros productos son 100% naturales</li>
+              <li><i class="fas fa-check-circle"></i> Preparados al momento con frutas frescas</li>
+              <li><i class="fas fa-check-circle"></i> Tiempo de entrega estimado: 30-45 minutos</li>
+              <li><i class="fas fa-check-circle"></i> Pago contra entrega</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Script para el formulario -->
-  <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
