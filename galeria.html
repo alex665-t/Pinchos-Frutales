@@ -1,56 +1,105 @@
 <!DOCTYPE html>
-<!-- galeria.html - Página con galería de imágenes y videos -->
+<!-- 
+  galeria.html - Página de galería multimedia con imágenes y videos de productos
+  Incluye:
+  - Menú lateral contraíble
+  - Galería de videos
+  - Galería de imágenes con miniaturas
+  - Diseño responsivo
+-->
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-  <title>Galería | Pinchos de Frutas</title> <!-- Título de la pestaña -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
-  <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres para soportar acentos y caracteres especiales -->
+  <title>Galería | Pinchos de Frutas</title> <!-- Título que aparece en la pestaña del navegador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para diseño responsivo -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Iconos de Font Awesome -->
+  <link rel="stylesheet" href="styles.css"> <!-- Hoja de estilos principal -->
   <link rel="icon" type="image/png" href="logopincho-removebg-preview.png"> <!-- Ícono de la pestaña -->
 </head>
 <body>
 
-  <!-- Barra de navegación -->
-  <nav>
-    <a href="index.html">Inicio</a> <!-- Enlace a inicio -->
-    <a href="mision_vision.html">Misión y Visión</a> <!-- Enlace a misión/visión -->
-    <a href="pedidos.html">Pedidos</a> <!-- Enlace a pedidos -->
-    <a href="galeria.html">Galería</a> <!-- Enlace actual -->
+  <!-- Menú lateral - Permite navegar entre secciones del sitio -->
+  <nav class="sidebar">
+    <div class="logo">
+      <img src="logopincho-removebg-preview.png" alt="Logo Pinchos de Frutas">
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="mision_vision.html">
+          <i class="fas fa-bullseye"></i>
+          <span>Misión y Visión</span>
+        </a>
+      </li>
+      <li>
+        <a href="marketing.html">
+          <i class="fas fa-chart-line"></i>
+          <span>Marketing</span>
+        </a>
+      </li>
+      <li>
+        <a href="pedidos.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Pedidos</span>
+        </a>
+      </li>
+      <li>
+        <a href="galeria.html" class="active">
+          <i class="fas fa-images"></i>
+          <span>Galería</span>
+        </a>
+      </li>
+    </ul>
+    <div class="user-profile">
+      <img src="https://ui-avatars.com/api/?name=César+Portillo&background=ff9800&color=fff" alt="Usuario">
+      <span>@howtodewr</span>
+      <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
   </nav>
 
-  <!-- Contenido principal -->
-  <main>
-    <h1>Galería Multimedia</h1> <!-- Título principal -->
-    
-    <!-- Sección de videos -->
-    <section>
-      <h2>Videos de Nuestros Productos</h2> <!-- Subtítulo -->
-      <div class="video-container">
-        <!-- Video 1 -->
-        <iframe src="video1.mp4" frameborder="0" allowfullscreen></iframe>
-        <!-- Video 2 -->
-        <iframe src="video2.mp4" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <!-- Sección de imágenes -->
-    <section>
-      <h2>Imágenes de Nuestros Pinchos</h2> <!-- Subtítulo -->
-      <div class="gallery">
-        <!-- Imagen principal -->
-        <img id="galeriaImagen" class="main-img" src="i5.jpg" alt="Pinchos de Frutas">
-        <!-- Miniaturas -->
-        <div class="thumbnails">
-          <img class="thumbnail" src="i5.jpg" alt="Pincho 1" onclick="cambiarImagenGaleria(this)">
-          <img class="thumbnail" src="i3.jpg" alt="Pincho 2" onclick="cambiarImagenGaleria(this)">
-          <img class="thumbnail" src="i4.jpg" alt="Pincho 3" onclick="cambiarImagenGaleria(this)">
-          <img class="thumbnail" src="i2.jpg" alt="Pincho 4" onclick="cambiarImagenGaleria(this)">
+  <!-- Contenido principal de la galería -->
+  <main class="main-content">
+    <div class="gallery-container">
+      <h1>Galería Multimedia</h1> <!-- Título principal de la página -->
+      
+      <!-- Sección de videos - Muestra videos promocionales de los productos -->
+      <section class="gallery-section">
+        <h2>Videos de Nuestros Productos</h2>
+        <div class="video-container">
+          <!-- Video 1 - Video promocional del producto -->
+          <iframe src="video1.mp4" frameborder="0" allowfullscreen></iframe>
+          <!-- Video 2 - Video demostrativo de preparación -->
+          <iframe src="video2.mp4" frameborder="0" allowfullscreen></iframe>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Sección de imágenes - Galería interactiva de productos -->
+      <section class="gallery-section">
+        <h2>Imágenes de Nuestros Pinchos</h2>
+        <div class="gallery">
+          <!-- Contenedor de imagen principal - Muestra la imagen seleccionada en grande -->
+          <div class="main-img-container">
+            <img id="galeriaImagen" class="main-img" src="i5.jpg" alt="Pinchos de Frutas">
+          </div>
+          
+          <!-- Miniaturas - Permite seleccionar qué imagen ver en grande -->
+          <div class="thumbnails">
+            <img class="thumbnail" src="i5.jpg" alt="Pincho 1" onclick="cambiarImagenGaleria(this)">
+            <img class="thumbnail" src="i3.jpg" alt="Pincho 2" onclick="cambiarImagenGaleria(this)">
+            <img class="thumbnail" src="i4.jpg" alt="Pincho 3" onclick="cambiarImagenGaleria(this)">
+            <img class="thumbnail" src="i2.jpg" alt="Pincho 4" onclick="cambiarImagenGaleria(this)">
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- Script para la galería -->
-  <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+  <!-- Scripts - Funcionalidad interactiva de la página -->
+  <script src="script.js"></script> <!-- Controla la galería y el menú -->
 </body>
 </html>
