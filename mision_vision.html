@@ -1,54 +1,101 @@
 <!DOCTYPE html>
-<!-- mision_vision.html - Página con la misión y visión de la empresa -->
 <html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-  <title>Misión y Visión | Pinchos de Frutas</title> <!-- Título de la pestaña -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
-  <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos -->
-  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png"> <!-- Ícono de la pestaña -->
+  <meta charset="UTF-8">
+  <title>Inicio | Pinchos de Frutas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logopincho-removebg-preview.png">
 </head>
 <body>
-
-  <!-- Barra de navegación -->
-  <nav>
-    <a href="index.html">Inicio</a> <!-- Enlace a inicio -->
-    <a href="mision_vision.html">Misión y Visión</a> <!-- Enlace actual -->
-    <a href="pedidos.html">Pedidos</a> <!-- Enlace a pedidos -->
-    <a href="galeria.html">Galería</a> <!-- Enlace a galería -->
+  <!-- Menú lateral -->
+  <nav class="sidebar">
+    <div class="logo">
+      <img src="logopincho-removebg-preview.png" alt="Logo Pinchos de Frutas">
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="mision_vision.html">
+          <i class="fas fa-bullseye"></i>
+          <span>Misión y Visión</span>
+        </a>
+      </li>
+      <li>
+        <a href="marketing.html">
+          <i class="fas fa-chart-line"></i>
+          <span>Marketing</span>
+        </a>
+      </li>
+      <li>
+        <a href="pedidos.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Pedidos</span>
+        </a>
+      </li>
+      <li>
+        <a href="galeria.html">
+          <i class="fas fa-images"></i>
+          <span>Galería</span>
+        </a>
+      </li>
+    </ul>
+    <div class="user-profile">
+      <img src="https://ui-avatars.com/api/?name=César+Portillo&background=ff9800&color=fff" alt="Usuario">
+      <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
   </nav>
 
   <!-- Contenido principal -->
-  <main>
-    <!-- Sección de misión -->
-    <section>
-      <h1>Nuestra Misión</h1> <!-- Título principal -->
-      <p>Ofrecer pinchos de frutas deliciosas y saludables, utilizando ingredientes frescos y naturales para promover una alimentación balanceada y satisfacer los paladares más exigentes.</p>
+  <main class="main-content">
+    <section class="hero">
+      <h1>Pinchos de Frutas</h1>
+      <p class="subtitle">🌟 Bienvenidos a Pinchos de Frutas, una propuesta deliciosa, saludable y fresca para ti.</p>
       
-      <p>Nos comprometemos a:</p>
-      <ul>
-        <li>Utilizar solo frutas frescas de temporada</li>
-        <li>Preparar cada pedido al momento</li>
-        <li>Ofrecer combinaciones innovadoras</li>
-        <li>Mantener altos estándares de higiene</li>
-        <li>Proporcionar un servicio rápido y amable</li>
-      </ul>
+      <!-- Galería -->
+      <div class="gallery">
+        <img id="mainImage" class="main-img" src="imagen1.jpg" alt="Pinchos de Frutas">
+        <div class="thumbnails">
+          <img class="thumbnail" src="imagen1.jpg" alt="Pincho Dulce" onclick="cambiarImagen(this)">
+          <img class="thumbnail" src="i1.jpg" alt="Pincho Picante" onclick="cambiarImagen(this)">
+          <img class="thumbnail" src="i3.jpg" alt="Variedad de Frutas" onclick="cambiarImagen(this)">
+        </div>
+      </div>
     </section>
 
-    <!-- Sección de visión -->
-    <section>
-      <h2>Nuestra Visión</h2> <!-- Subtítulo -->
-      <p>Ser reconocidos como la mejor opción en snacks saludables, expandiendo nuestra presencia a nivel nacional y manteniendo siempre nuestro compromiso con la calidad y frescura de nuestros productos.</p>
+    <!-- Productos destacados -->
+    <section class="featured-products">
+      <h2>Nuestros Productos Destacados</h2>
+      <p>Ofrecemos pinchos de frutas frescas con combinaciones únicas:</p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-badge hot">¡Nuevo!</div>
+          <img src="imagen1.jpg" alt="Pincho Dulce">
+          <h3>Pincho Dulce</h3>
+          <p>Manzana, guineo, malvaviscos y gomitas</p>
+          <span class="price">$0.80</span>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-badge spicy">Picante</div>
+          <img src="i1.jpg" alt="Pincho Picante">
+          <h3>Pincho Picante</h3>
+          <p>Piña, sandía, chamoy y tajín</p>
+          <span class="price">$0.80</span>
+        </div>
+      </div>
       
-      <p>Visualizamos:</p>
-      <ul>
-        <li>Una marca asociada a alimentación saludable</li>
-        <li>Puntos de venta en principales ciudades</li>
-        <li>Franquicias que mantengan nuestros estándares</li>
-        <li>Productos innovadores cada temporada</li>
-        <li>Una comunidad de clientes satisfechos</li>
-      </ul>
+      <p class="disclaimer">¡Todos nuestros productos son 100% naturales y preparados al momento!</p>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
